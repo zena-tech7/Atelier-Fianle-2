@@ -64,12 +64,10 @@ const Form = ({ onDataChange }) => {
           onChange={(e) => handleChange("duration", +e.target.value)}
         />
       </div>
-      <button className="RESET" onClick={(e) => handleReset()}>
-        RESET
-      </button>
-      <button className="CALCULATE" onClick={(e) => handleCount()}>
-        CALCULATE
-      </button>
+       <div className="buttons">
+      <button className="RESET">RESET</button>
+      <button className="CALCULATE" onClick={(e)=> handleCount()}>CALCULATE</button>
+      </div>
     </div>
   );
 };
