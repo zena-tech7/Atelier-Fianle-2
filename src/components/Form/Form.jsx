@@ -65,7 +65,7 @@ const Form = ({ onDataChange }) => {
         />
       </div>
        <div className="buttons">
-      <button className="RESET">RESET</button>
+      <button className="RESET" onClick={(e) => handleReset()} >RESET</button>
       <button className="CALCULATE" onClick={(e)=> handleCount()}>CALCULATE</button>
       </div>
     </div>
