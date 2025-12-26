@@ -1,6 +1,6 @@
 .card{
-  max-width: 1000px;
-  margin: 10px 30px;
+  max-width: 1200px;
+  margin: 10px 60px;
   background: linear-gradient(135deg, #3d8b7a, #4fa88e);
   border-radius: 12px;
   padding: 30px 30px;
@@ -9,7 +9,8 @@
 
 .input {
   margin-bottom: 35px;
-  display: inline-block;
+  display: inline-block ;
+  justify-items: center;
   width: 45%;
   vertical-align: top;
 }

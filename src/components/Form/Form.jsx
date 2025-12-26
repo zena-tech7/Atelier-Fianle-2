@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Form.css";
 
 const Form = ({ onDataChange }) => {
-    
+
   const [formData, setFormData] = useState({
     currentSavings: 10000,
     yearlySavings: 1000,
@@ -21,13 +21,11 @@ const Form = ({ onDataChange }) => {
 
   const handleCount =()=>{
     onDataChange(formData);
-
+    console.log(formData);
   }
 
   return (
     <div className="card">
-      <title>Investment Calculator</title>
-
       <div className="input">
         <p>CURRENT SAVINGS</p>
         <input
