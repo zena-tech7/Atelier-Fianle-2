@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Form.css";
 
 const Form = ({ onDataChange }) => {
-
   const [formData, setFormData] = useState({
     currentSavings: 10000,
     yearlySavings: 1000,
@@ -16,13 +15,20 @@ const Form = ({ onDataChange }) => {
       [field]: value,
     };
     setFormData(updatedData);
-
   };
 
-  const handleCount =()=>{
+  const handleCount = () => {
     onDataChange(formData);
-    console.log(formData);
-  }
+  };
+
+  const handleReset = () => {
+    setFormData({
+      currentSavings: 10000,
+      yearlySavings: 1000,
+      expectedInterest: 10,
+      duration: 10,
+    });
+  };
 
   return (
     <div className="card">
@@ -58,8 +64,12 @@ const Form = ({ onDataChange }) => {
           onChange={(e) => handleChange("duration", +e.target.value)}
         />
       </div>
-      <button className="RESET">RESET</button>
-      <button className="CALCULATE" onClick={(e)=> handleCount()}>CALCULATE</button>
+      <button className="RESET" onClick={(e) => handleReset()}>
+        RESET
+      </button>
+      <button className="CALCULATE" onClick={(e) => handleCount()}>
+        CALCULATE
+      </button>
     </div>
   );
 };
