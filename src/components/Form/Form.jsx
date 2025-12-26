@@ -58,8 +58,10 @@ const Form = ({ onDataChange }) => {
           onChange={(e) => handleChange("duration", +e.target.value)}
         />
       </div>
+      <div className="buttons">
       <button className="RESET">RESET</button>
       <button className="CALCULATE" onClick={(e)=> handleCount()}>CALCULATE</button>
+      </div>
     </div>
   );
 };

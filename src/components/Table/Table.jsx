@@ -27,7 +27,7 @@ const Table = ({ data, initialInvestment }) => {
             <tr key={index}>
               <td>{year.year}</td>
               <td>${year.totalSavings.toFixed(2)}</td>
-              <td>${year.yearlyInterest.toFixed(2)}</td>
+              <td>${year.interestYear.toFixed(2)}</td>
               <td>${year.totalInterest.toFixed(2)}</td>
               <td>${year.investedCapital.toFixed(2)}</td>
             </tr>
