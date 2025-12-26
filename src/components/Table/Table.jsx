@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Table.css';
+import './Table.css';
 
 const Table = ({ data, initialInvestment }) => {
   if (!data || data.length === 0) {
