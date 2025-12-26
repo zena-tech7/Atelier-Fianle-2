@@ -1,28 +1,69 @@
-import React from 'react'
-import './form.css'
+import { useState } from "react";
+import "./Form.css";
 
-const Form = () => {
+const Form = ({ onDataChange }) => {
+    
+  const [formData, setFormData] = useState({
+    currentSavings: 10000,
+    yearlySavings: 1000,
+    expectedInterest: 10,
+    duration: 10,
+  });
+
+  const handleChange = (field, value) => {
+    const updatedData = {
+      ...formData,
+      [field]: value,
+    };
+    setFormData(updatedData);
+
+  };
+
+  const handleCount =()=>{
+    onDataChange(formData);
+
+  }
+
   return (
-    <div className='card'>
-        <title>Investment Calculator</title>
-        <div className='input'>
-            <p>CURRENT SAVINGS</p>
-            <input type="number" defaultValue={10000}/>
-        </div>
-        <div className='input'>
-            <p>YEARLY SAVINGS</p>
-            <input type="number" defaultValue={1000}/>
-        </div>
-        <div className='input'>
-            <p>EXPECTED INTEREST (% PER YEAR)</p>
-            <input type="number" defaultValue={10}/>
-        </div>
-        <div className='input'>
-            <p>INVESTMENT DURARTION (YEARS)</p>
-            <input type="number" defaultValue={10}/>
-        </div>
-    </div>
-  )
-}
+    <div className="card">
+      <title>Investment Calculator</title>
 
-export default Form
+      <div className="input">
+        <p>CURRENT SAVINGS</p>
+        <input
+          type="number"
+          value={formData.currentSavings}
+          onChange={(e) => handleChange("currentSavings", +e.target.value)}
+        />
+      </div>
+      <div className="input">
+        <p>YEARLY SAVINGS</p>
+        <input
+          type="number"
+          value={formData.yearlySavings}
+          onChange={(e) => handleChange("yearlySavings", +e.target.value)}
+        />
+      </div>
+      <div className="input">
+        <p>EXPECTED INTEREST (% PER YEAR)</p>
+        <input
+          type="number"
+          value={formData.expectedInterest}
+          onChange={(e) => handleChange("expectedInterest", +e.target.value)}
+        />
+      </div>
+      <div className="input">
+        <p>INVESTMENT DURARTION (YEARS)</p>
+        <input
+          type="number"
+          value={formData.duration}
+          onChange={(e) => handleChange("duration", +e.target.value)}
+        />
+      </div>
+      <button className="RESET">RESET</button>
+      <button className="CALCULATE" onClick={(e)=> handleCount()}>CALCULATE</button>
+    </div>
+  );
+};
+
+export default Form;
