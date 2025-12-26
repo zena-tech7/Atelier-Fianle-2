@@ -7,6 +7,9 @@ body {
   background: radial-gradient(circle at center, #303b37, #1a1f1d);
   color: #e1eeeb;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
