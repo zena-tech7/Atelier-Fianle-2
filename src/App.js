@@ -52,7 +52,7 @@ console.log(results);
       <h2>Investment calculator </h2>
       </header>
       <Form onDataChange={handleFormData} />
-      <Table/>
+      <Table data={results} initialInvestment={results[0]} />
       
     </div>
   );

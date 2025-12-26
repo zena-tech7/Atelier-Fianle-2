@@ -1,23 +1,20 @@
-.card{
-  max-width: 1200px;
-  margin: 10px 60px;
+.card {
+  max-width: 650px;
+  margin: 10px auto; /* centrer horizontalement */
   background: linear-gradient(135deg, #3d8b7a, #4fa88e);
   border-radius: 12px;
-  padding: 30px 30px;
+    padding: 30px;
+
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .input {
   margin-bottom: 35px;
-  display: inline-block ;
-  justify-items: center;
+  margin-right: 20px;
+  display: inline-block;
   width: 45%;
   vertical-align: top;
 }
-
-/* .input:nth-child(odd) {
-  margin-right: 4%;
-} */
 
 .input p {
   color: rgba(255, 255, 255, 0.9);
@@ -29,7 +26,7 @@
 }
 
 .input input {
-  /* width: %; */
+  width: 100%;
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.4);
   border-radius: 6px;
@@ -52,37 +49,34 @@
 
 /* Buttons container */
 .buttons {
-  text-align: center;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center; /* centre horizontalement tous les boutons */
+  flex-wrap: wrap; /* permet aux boutons de passer à la ligne si écran petit */
+  gap: 10px; /* espace entre les boutons */
+  
 }
+
 
 button {
-    background-color: #4E9A84;
-    border: none;
-    border-radius: 6px;
-    padding: 12px 35px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    margin: 0 8px;
-    transition: all 0.3s ease;
-    color: white;
+  background-color: #4e9a84;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 35px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  
+  transition: all 0.3s ease;
+  color: white;
 }
-.CALCULATE{
-  background:#1E4D3E;
 
+
+button.CALCULATE {
+  background: #1e4d3e;
 }
 
 button:hover {
   background: rgba(0, 0, 0, 0.25);
-}
-
-button.calculate {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-button.calculate:hover {
-  background: rgba(0, 0, 0, 0.35);
 }
 
 /* Responsive Design */
@@ -96,10 +90,6 @@ button.calculate:hover {
     width: 100%;
     display: block;
     margin-bottom: 25px;
-  }
-
-  .input:nth-child(odd) {
-    margin-right: 0;
   }
 
   .input p {
@@ -126,10 +116,6 @@ button.calculate:hover {
   .card {
     padding: 25px 20px;
     border-radius: 8px;
-  }
-
-  .input {
-    margin-bottom: 20px;
   }
 
   .input p {
